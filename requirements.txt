@@ -1,0 +1,9 @@
+numpy
+pandas
+folium
+streamlit
+streamlit_folium
+folium_static
+matplotlib.pyplot
+altair 
+PIL
