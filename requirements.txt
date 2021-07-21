@@ -3,6 +3,6 @@ pandas
 folium
 streamlit
 streamlit_folium
-matplotlib.pyplot
+matplotlib
 altair 
 PIL
