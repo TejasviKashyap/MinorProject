@@ -61,7 +61,7 @@ def load_data():
 
 @st.cache
 def loadStatewiseCasesData(states):
-    ind_info = pd.read_csv(r"D:\assignments\6th sem\Minor Project\datasets\covid_19_india.csv")
+    ind_info = pd.read_csv("covid_19_india.csv")
     state_info=pd.DataFrame(ind_info)
     
     state_info.rename(columns={'State/UnionTerritory': 'State'}, inplace=True)
@@ -71,7 +71,7 @@ def loadStatewiseCasesData(states):
 
 @st.cache
 def loadStatewiseVaccineData(states):
-    ind_inf = pd.read_csv(r"D:\assignments\6th sem\Minor Project\datasets\covid_vaccine_statewise.csv")
+    ind_inf = pd.read_csv("covid_vaccine_statewise.csv")
     statewiseVaccination = pd.DataFrame(ind_inf)
     statewiseVaccination.rename(columns={
         'State/UnionTerritory': 'State',
