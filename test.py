@@ -57,7 +57,7 @@ def loadImages():
 @st.cache
 def load_data():
     #info = pd.read_html("http://www.quickgs.com/latitudinal-and-longitudinal-extents-of-india-indian-states-and-cities/") 
-    info = pd.read_excel('LatLong.xlsx')
+    info = pd.read_csv('LatLong.csv')
     #convering the table data into DataFrame
     coordinates = pd.DataFrame(info)
     coordinates['Latitude']  = coordinates['Latitude'].apply(data_pre).astype('float')
