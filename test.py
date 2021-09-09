@@ -56,9 +56,10 @@ def loadImages():
 
 @st.cache
 def load_data():
-    info = pd.read_html("http://www.quickgs.com/latitudinal-and-longitudinal-extents-of-india-indian-states-and-cities/") 
+    #info = pd.read_html("http://www.quickgs.com/latitudinal-and-longitudinal-extents-of-india-indian-states-and-cities/") 
+    info = pd.read_excel('LatLong.xlsx')
     #convering the table data into DataFrame
-    coordinates = pd.DataFrame(info[0])
+    coordinates = pd.DataFrame(info)
     coordinates['Latitude']  = coordinates['Latitude'].apply(data_pre).astype('float')
     coordinates['Longitude'] = coordinates['Longitude'].apply(data_pre).astype('float')
     #print(coordinates)
@@ -279,9 +280,7 @@ title = '<body bgcolor="red"><h1>Sahayog Bharat - An Online Covid Dashboard</h1>
 st.markdown(title, unsafe_allow_html=True)
 
 
-'''Sahyog Bharat is a portal where citizens can find and visualize covid related information and gives  them a brief understanding of the covid trends in various domains .
-As the name suggests, it helps the citizens gain an overview of current active cases , recovered cases,  and total deaths across the states in india.
-'''
+st.write("Sahayog Bharat is a portal where citizens can find and visualize covid related information and gives  them a brief understanding of the covid trends in various domains. As the name suggests, it helps the citizens gain an overview of current active cases , recovered cases,  and total deaths across the states in India.")
 
 indiaCovidData = load_data()
 statewiseCovidData = loadStatewiseCasesData(indiaCovidData)
