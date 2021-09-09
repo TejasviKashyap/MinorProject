@@ -7,4 +7,4 @@ streamlit==0.84.2
 streamlit-folium==0.4.0
 Pillow==8.1.0
 lxml==4.6.3
-xlrd==2.0.1
+xlrd==1.2.0
